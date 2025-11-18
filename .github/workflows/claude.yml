@@ -1,0 +1,19 @@
+name: Claude Code
+
+  on:
+    issue_comment:
+      types: [created]
+    pull_request_review_comment:
+      types: [created]
+    pull_request:
+      types: [opened, synchronize]
+
+  jobs:
+    claude:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+
+        - uses: anthropics/claude-code-action@v1
+          with:
+            anthropic_api_key: ${{ secrets.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 }}
