@@ -8,7 +8,7 @@ on:
     pull_request:
       types: [opened, synchronize]
 
-  permissions:
+permissions:
     contents: write
     pull-requests: write
     issues: write
